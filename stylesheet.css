@@ -1,0 +1,178 @@
+/* Based on Jon Barron's academic website style */
+
+a {
+  color: #1772d0;
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  color: #f09228;
+  text-decoration: none;
+}
+
+body,
+td,
+th,
+tr,
+p,
+a {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+strong {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+h2 {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.name {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.one {
+  width: 160px;
+  height: 160px;
+  position: relative;
+}
+
+.two {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -webkit-transition: opacity .2s ease-in-out;
+}
+
+.fade {
+  transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -webkit-transition: opacity .2s ease-in-out;
+}
+
+span.highlight {
+  background-color: #ffffd0;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.papertitle {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+}
+
+.hoverZoomLink {
+  transition: transform 0.3s ease;
+}
+
+.hoverZoomLink:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .name {
+    font-size: 24px;
+  }
+  
+  body,
+  td,
+  th,
+  tr,
+  p,
+  a {
+    font-size: 13px;
+  }
+  
+  .one,
+  .two {
+    width: 120px;
+    height: 120px;
+  }
+  
+  table {
+    width: 100% !important;
+  }
+}
+
+/* Additional styling for better visual hierarchy */
+p {
+  margin: 10px 0;
+  text-align: justify;
+}
+
+td {
+  vertical-align: top;
+}
+
+/* Project image styling */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Hover effects for project entries */
+tr:hover {
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease;
+}
+
+/* Styling for highlighted projects */
+tr[bgcolor="#ffffd0"]:hover {
+  background-color: #ffff99 !important;
+}
+
+/* Link styling within content */
+td a {
+  border-bottom: 1px dotted #1772d0;
+  transition: all 0.3s ease;
+}
+
+td a:hover {
+  border-bottom: 1px solid #f09228;
+}
+
+/* Skills section styling */
+strong {
+  color: #333;
+}
+
+/* Footer styling */
+p[style*="text-align:right"] {
+  color: #666;
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+
+/* Profile picture container */
+.profile-container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Navigation links styling */
+p[style*="text-align:center"] a {
+  padding: 5px 10px;
+  margin: 0 5px;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+p[style*="text-align:center"] a:hover {
+  background-color: #f0f0f0;
+}
