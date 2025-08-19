@@ -6,13 +6,65 @@
     <meta name="author" content="Aastha Ketan Kataria">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <style>
+      body {
+        font-family: 'Lato', Verdana, Helvetica, sans-serif;
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+      }
+      
+      a {
+        color: #1772d0;
+        text-decoration: none;
+      }
+      
+      a:focus, a:hover {
+        color: #f09228;
+        text-decoration: none;
+      }
+      
+      .name {
+        font-family: 'Lato', Verdana, Helvetica, sans-serif;
+        font-size: 32px;
+        font-weight: 400;
+      }
+      
+      .papertitle {
+        font-family: 'Lato', Verdana, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+      }
+      
+      .highlight {
+        background-color: #ffffd0;
+      }
+      
+      .one {
+        width: 160px;
+        height: 160px;
+        position: relative;
+      }
+      
+      .two {
+        width: 160px;
+        height: 160px;
+        position: absolute;
+        transition: opacity .2s ease-in-out;
+        -moz-transition: opacity .2s ease-in-out;
+        -webkit-transition: opacity .2s ease-in-out;
+      }
+      
+      table {
+        border-spacing: 0px;
+      }
+    </style>
   </head>
-
   <body>
     <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
       <tr style="padding:0px">
         <td style="padding:0px">
+          <!-- Header Section -->
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr style="padding:0px">
               <td style="padding:2.5%;width:63%;vertical-align:middle">
@@ -20,85 +72,119 @@
                   Aastha Ketan Kataria
                 </p>
                 <p>
-                  I'm a B.Tech Information Technology student with Honours in AI & ML at <a href="https://kjsce.somaiya.edu/">K J Somaiya College of Engineering</a>, Mumbai. 
-                  My journey began not in classrooms, but across diverse landscapes—from table tennis courts to sailing ships, from robotics workshops to hackathon venues. 
-                  This interdisciplinary foundation, built through years of exploration and discovery, has shaped me into someone who bridges complex technical concepts 
-                  for both experts and laypeople alike.
+                  I'm a B.Tech Information Technology student at <a href="https://kjsce.somaiya.edu/">K J Somaiya College of Engineering</a>, Mumbai, with a focus on AI & ML. 
+                  I'm interested in robotics, computer vision, and practical AI applications that solve real-world problems.
                 </p>
                 <p>
-                  As Team Captain of <a href="#tmrt">The Marine Robotics Team</a> and winner of the <a href="#sih">Smart India Hackathon 2024</a>, 
-                  I've learned that we are the sum of our actions. Each project, competition, and research endeavor builds upon the last, 
-                  creating a resilient foundation for tackling the next challenge in AI, robotics, and beyond.
+                  I work on projects that bridge theory and practice—from developing tactile robotics systems to creating AI models for medical diagnostics. 
+                  My recent work has centered on industrial AI applications and autonomous systems.
                 </p>
                 <p style="text-align:center">
                   <a href="mailto:aasthakkataria@gmail.com">Email</a> &nbsp;/&nbsp;
                   <a href="data/Aastha-CV.pdf">CV</a> &nbsp;/&nbsp;
                   <a href="https://github.com/faith250">GitHub</a> &nbsp;/&nbsp;
-                  <a href="https://www.linkedin.com/in/aastha-kataria-b5847426b/">LinkedIn</a> &nbsp;/&nbsp;
-                  <a href="tel:+91-9326492515">Phone</a>
+                  <a href="https://www.linkedin.com/in/aastha-kataria-b5847426b/">LinkedIn</a>
                 </p>
               </td>
               <td style="padding:2.5%;width:37%;max-width:37%">
-                <a href="images/profile.jpg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 20%;" alt="profile photo" src="images/profile.jpg" class="hoverZoomLink"></a>
+                <a href="images/profile.jpg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 20%;" alt="profile photo" src="images/profile.jpg"></a>
               </td>
             </tr>
           </tbody></table>
 
-
-          <!-- Research & Innovation Section -->
+          <!-- Research Papers Section -->
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>Research & Innovation</h2>
+              <td style="padding:20px;width:100%;vertical-align:middle">
+                <h2>Research Papers</h2>
                 <p>
-                  My research interests span computer vision, AI/ML applications, and robotics. I focus on developing practical solutions using deep learning, 
-                  particularly in object detection, autonomous systems, and industrial applications. My journey from hands-on building to theoretical inquiry 
-                  has culminated in a passion for contributing new knowledge to the field. Some key projects are <span class="highlight">highlighted</span>.
+                  I focus on AI applications in healthcare and robotics, developing practical machine learning solutions for real-world problems.
                 </p>
               </td>
             </tr>
           </tbody></table>
-
-          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-
-            <!-- TMRT Project - Highlighted -->
-            <tr onmouseout="tmrt_stop()" onmouseover="tmrt_start()" bgcolor="#ffffd0" id="tmrt">
-              <td style="padding:16px;width:20%;vertical-align:middle">
-                <div class="one">
-                  <div class="two" id='tmrt_image'>
-                    <img src='images/tmrt.png' width="160" style="border-radius: 8px;">
-                  </div>
-                  <img src='images/tmrt.png' width="160" style="border-radius: 8px;">
-                </div>
-                <script type="text/javascript">
-                  function tmrt_start() {
-                    document.getElementById('tmrt_image').style.opacity = "1";
-                  }
-                  function tmrt_stop() {
-                    document.getElementById('tmrt_image').style.opacity = "0";
-                  }
-                  tmrt_stop()
-                </script>
+          
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            
+            <!-- DeepPET-3D Research -->
+            <tr>
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <img src='images/deeppet3d.jpg' width="160" style="border-radius: 8px;" alt="DeepPET-3D">
               </td>
-              <td style="padding:8px;width:80%;vertical-align:middle">
-                <span class="papertitle">The Marine Robotics Team (TMRT): Leading Innovation in Aquatic Robotics</span>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <span class="papertitle">DeepPET-3D: A 3D Convolutional Neural Network for Early Detection of Alzheimer's Disease Using 18F-FDG PET Imaging</span>
                 <br>
-                <strong>Aastha Ketan Kataria</strong> (Team Captain/Co-Captain)
+                <strong>Aastha Ketan Kataria</strong>, et al.
                 <br>
-                <em>Mega project </em>, 2023-2025
+                <em>Taylor & Francis, ICTEAH</em>, 2025
                 <br>
                 <p></p>
                 <p>
-                  As Project Lead, I had lead the development of 'Nisrag,' a sewage cleaning robot, and have contributed to the design of 
-                  an aquatic desilting robot and a drone-based groundwater mapping system, all utilizing ROS (Robot Operating System). 
-                  This work represents the intersection of environmental sustainability and cutting-edge robotics technology.
+                  3D convolutional neural network for early Alzheimer's detection using PET imaging. 
+                  Achieved 96.91% accuracy by analyzing complete 3D brain scans.
                 </p>
               </td>
             </tr>
 
-            <!-- Smart India Hackathon Winner -->
-            <tr onmouseout="sih_stop()" onmouseover="sih_start()" bgcolor="#ffffd0" id="sih">
-              <td style="padding:16px;width:20%;vertical-align:middle">
+            <!-- Disease Prediction System -->
+            <tr>
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <img src='images/disease-prediction.jpg' width="160" style="border-radius: 8px;" alt="Disease Prediction">
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <span class="papertitle">Machine Learning-Based Disease Prediction System using Symptom Analysis</span>
+                <br>
+                <strong>Aastha Ketan Kataria</strong>, et al. - <font color="red"><strong>Best Speaker Award</strong></font>
+                <br>
+                <em>Taylor & Francis, ICTEAH</em>, 2025
+                <br>
+                <p></p>
+                <p>
+                  Weighted KNN model predicting 230+ diseases from symptoms with 93.5% accuracy. 
+                  Enables scalable preliminary health screening.
+                </p>
+              </td>
+            </tr>
+
+            <!-- PPO Research -->
+            <tr>
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <img src='images/ppo-quadruped.jpg' width="160" style="border-radius: 8px;" alt="PPO Research">
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <span class="papertitle">Comparative Analysis of Standard vs. Curriculum-Based PPO in Quadrupedal Locomotion</span>
+                <br>
+                <strong>Aastha Ketan Kataria</strong>, et al.
+                <br>
+                <em>Springer, ICICCT</em>, 2025
+                <br>
+                <p></p>
+                <p>
+                  Comparative study showing standard reinforcement learning outperformed curriculum-based approaches 
+                  in complex quadrupedal locomotion due to negative transfer effects.
+                </p>
+              </td>
+            </tr>
+
+          </tbody></table>
+
+          <!-- Hackathons Section -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:20px;width:100%;vertical-align:middle">
+                <h2>Hackathons</h2>
+                <p>
+                  Competition-driven development projects showcasing rapid prototyping and team leadership skills.
+                </p>
+              </td>
+            </tr>
+          </tbody></table>
+          
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+            <!-- Smart India Hackathon Winner - Highlighted -->
+            <tr onmouseout="sih_stop()" onmouseover="sih_start()" bgcolor="#ffffd0">
+              <td style="padding:20px;width:25%;vertical-align:middle">
                 <div class="one">
                   <div class="two" id='sih_image'>
                     <img src='images/simpleswastha.png' width="160" style="border-radius: 8px;">
@@ -115,30 +201,135 @@
                   sih_stop()
                 </script>
               </td>
-              <td style="padding:8px;width:80%;vertical-align:middle">
-                <span class="papertitle">Smart India Hackathon 2024: SimpleSwastha Hospital Management System</span>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <span class="papertitle">SimpleSwastha: Hospital Management System</span>
                 <br>
-                <strong>Aastha Ketan Kataria</strong> (Team Lead) and team
+                <strong>Aastha Ketan Kataria</strong> (Team Lead)
                 <br>
-                <em>Smart India Hackathon 2024</em> - <font color="red"><strong>WINNER</strong></font>
+                <em>Smart India Hackathon</em>, 2024 - <font color="red"><strong>WINNER</strong></font>
                 <br>
                 <p></p>
                 <p>
-                  My most memorable victory. After placing second in our internal college round, our team was selected as one of the top 5 from over 500 applicants. 
-                  As team lead, I guided us through the Grand Finale in Chhattisgarh, where we emerged as winners among the final five teams. 
-                  This comprehensive hospital management application streamlines patient care and medical record management.
+                  Led team to victory in national hackathon, selected from 500+ applicants to final 5 teams. 
+                  Developed comprehensive hospital management application for patient care and medical record management.
                 </p>
               </td>
             </tr>
 
-            <!-- Industrial AI Project -->
+            <!-- MoneyMind Project -->
+            <tr>
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <img src='images/moneymind.jpg' width="160" style="border-radius: 8px;" alt="MoneyMind App">
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <span class="papertitle">MoneyMind: Multi-Agent Financial Assistant</span>
+                <br>
+                <strong>Aastha Ketan Kataria</strong> (Team Lead)
+                <br>
+                <em>Google Solution Challenge</em>, 2024
+                <br>
+                <p></p>
+                <p>
+                  Multi-agent GenAI financial assistant powered by Google Gemini for new investor guidance. 
+                  Built complete system from concept to deployment despite hardware constraints.
+                </p>
+              </td>
+            </tr>
+
+            <!-- Myntra Hackathon -->
+            <tr>
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <img src='images/myntra-project.jpg' width="160" style="border-radius: 8px;" alt="Myntra WeForShe">
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <span class="papertitle">Myntra WeForShe Hackathon</span>
+                <br>
+                <strong>Aastha Ketan Kataria</strong> (Team Lead)
+                <br>
+                <em>Myntra WeForShe Hackathon</em>, 2024 - <font color="red"><strong>PRE-FINALIST</strong></font>
+                <br>
+                <p></p>
+                <p>
+                  Advanced from 1000+ participants through multiple rounds to reach the Grand Finale. 
+                  Demonstrated product development and pitching skills in competitive fintech environment.
+                </p>
+              </td>
+            </tr>
+
+          </tbody></table>
+
+          <!-- Robotics Team Section -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:20px;width:100%;vertical-align:middle">
+                <h2>Robotics Team</h2>
+                <p>
+                  Leading marine robotics development for environmental applications using ROS and autonomous systems.
+                </p>
+              </td>
+            </tr>
+          </tbody></table>
+          
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+            <!-- TMRT Project - Highlighted -->
+            <tr onmouseout="tmrt_stop()" onmouseover="tmrt_start()" bgcolor="#ffffd0">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='tmrt_image'>
+                    <img src='images/tmrt.png' width="160" style="border-radius: 8px;">
+                  </div>
+                  <img src='images/tmrt.png' width="160" style="border-radius: 8px;">
+                </div>
+                <script type="text/javascript">
+                  function tmrt_start() {
+                    document.getElementById('tmrt_image').style.opacity = "1";
+                  }
+                  function tmrt_stop() {
+                    document.getElementById('tmrt_image').style.opacity = "0";
+                  }
+                  tmrt_stop()
+                </script>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <span class="papertitle">The Marine Robotics Team: Aquatic Environmental Systems</span>
+                <br>
+                <strong>Aastha Ketan Kataria</strong> (Team Captain)
+                <br>
+                <em>Ongoing Project</em>, 2023-2025
+                <br>
+                <p></p>
+                <p>
+                  Leading development of 'Nisrag,' a sewage cleaning robot, an aquatic desilting robot, and a drone-based groundwater mapping system using ROS. 
+                  These systems address environmental challenges through autonomous robotics and sensor integration.
+                </p>
+              </td>
+            </tr>
+
+          </tbody></table>
+
+          <!-- Industrial Projects Section -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:20px;width:100%;vertical-align:middle">
+                <h2>Industrial Projects</h2>
+                <p>
+                  Applied AI research in industrial settings, focusing on computer vision and quality control automation.
+                </p>
+              </td>
+            </tr>
+          </tbody></table>
+          
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+            <!-- Industrial AI Project - Highlighted -->
             <tr onmouseout="godavari_stop()" onmouseover="godavari_start()" bgcolor="#ffffd0">
-              <td style="padding:16px;width:20%;vertical-align:middle">
+              <td style="padding:20px;width:25%;vertical-align:middle">
                 <div class="one">
                   <div class="two" id='godavari_image'>
-                    <img src='images/gbl.jpg' height="190" max-width: 100%; style="border-radius: 8px;">
+                    <img src='images/gbl.jpg' width="160" style="border-radius: 8px;">
                   </div>
-                  <img src='images/gbl.jpg' height="190"  max-width: 100%; style="border-radius: 8px;">
+                  <img src='images/gbl.jpg' width="160" style="border-radius: 8px;">
                 </div>
                 <script type="text/javascript">
                   function godavari_start() {
@@ -150,7 +341,7 @@
                   godavari_stop()
                 </script>
               </td>
-              <td style="padding:8px;width:100%;vertical-align:middle">
+              <td style="padding:20px;width:75%;vertical-align:middle">
                 <span class="papertitle">Real-time Contaminant Detection in Industrial Sugar Production</span>
                 <br>
                 <strong>Aastha Ketan Kataria</strong> (Project Lead)
@@ -159,272 +350,75 @@
                 <br>
                 <p></p>
                 <p>
-                  Selected as the only girl among 30 students, I led a team of 15 on a project in Karnataka. We're developing a proof-of-concept 
-                  for a real-time contaminant detection system in sugar production lines using the YOLOv8 model to automate and enhance quality control. 
-                  This project bridges AI research with practical industrial applications.
-                </p>
-              </td>
-            </tr>
-
-            <!-- MoneyMind Project -->
-            <tr>
-              <td style="padding:16px;width:20%;vertical-align:middle">
-                <img src='images/moneymind.jpg' width="160" style="border-radius: 8px;" alt="MoneyMind App">
-              </td>
-              <td style="padding:8px;width:80%;vertical-align:middle">
-                <span class="papertitle">MoneyMind: Multi-Agent GenAI Financial Assistant</span>
-                <br>
-                <strong>Aastha Ketan Kataria</strong> (Team Lead, Team Void)
-                <br>
-                <em>Google Solution Challenge 2024</em>
-                <br>
-                <p></p>
-                <p>
-                  Leading Team Void, we tackled the challenge of helping new investors make better financial decisions by developing a multi-agent GenAI 
-                  financial assistant powered by Google Gemini. From overcoming hardware limitations to mastering deep AI concepts from scratch, 
-                  we built a product we are immensely proud of. Though we didn't make the Top 100, it was an extraordinary learning experience.
-                </p>
-              </td>
-            </tr>
-
-            <!-- Myntra Hackathon -->
-            <tr>
-              <td style="padding:16px;width:20%;vertical-align:middle">
-                <img src='images/myntra-project.jpg' width="160" style="border-radius: 8px;" alt="Myntra WeForShe">
-              </td>
-              <td style="padding:8px;width:80%;vertical-align:middle">
-                <span class="papertitle">Myntra WeForShe Hackathon</span>
-                <br>
-                <strong>Aastha Ketan Kataria</strong> (Team Lead)
-                <br>
-                <em>Myntra WeForShe Hackathon 2024</em> - <font color="red"><strong>PRE-FINALIST</strong></font>
-                <br>
-                <p></p>
-                <p>
-                  Leading my team, we progressed from an initial pool of over 1000 participants, through narrowing rounds of 60, to reach the Grand Finale. 
-                  This was a masterclass in product development, pitching, and self-motivation—demonstrating the power of persistence and strategic thinking 
-                  in competitive environments.
+                  Leading team of 15 to develop YOLOv8-based real-time contaminant detection system for industrial sugar production lines. 
+                  Project focuses on automating quality control in manufacturing environments.
                 </p>
               </td>
             </tr>
 
           </tbody></table>
 
-          <!-- Research Papers Section -->
+          <!-- Experience Section -->
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>Academic Research: From Application to Creation</h2>
-                <p>
-                  My journey from hands-on building to theoretical inquiry has culminated in a passion for research, 
-                  allowing me to contribute new knowledge to the field of AI and machine learning.
-                </p>
+              <td style="padding:20px;width:100%;vertical-align:middle">
+                <h2>Experience</h2>
               </td>
             </tr>
           </tbody></table>
-
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            
-            <tr>
-              <td style="padding:16px;width:20%;vertical-align:middle">
-                <img src='images/deeppet3d.jpg' width="160" style="border-radius: 8px;" alt="DeepPET-3D">
-              </td>
-              <td style="padding:8px;width:80%;vertical-align:middle">
-                <span class="papertitle">DeepPET-3D: A 3D Convolutional Neural Network for Early Detection of Alzheimer's Disease Using 18F-FDG PET Imaging</span>
-                <br>
-                <strong>Aastha Ketan Kataria</strong> and collaborators
-                <br>
-                <em>Taylor & Francis, ICTEAH-2025</em>
-                <br>
-                <p></p>
-                <p>
-                  Co-authored research on a novel 3D-CNN that analyzes entire 3D PET scans to detect Alzheimer's Disease. 
-                  Our model achieved up to 96.91% accuracy, offering a powerful tool to support clinicians and enable earlier patient intervention.
-                </p>
-              </td>
-            </tr>
-
-            <tr>
-              <td style="padding:16px;width:20%;vertical-align:middle">
-                <img src='images/disease-prediction.jpg' width="160" style="border-radius: 8px;" alt="Disease Prediction">
-              </td>
-              <td style="padding:8px;width:80%;vertical-align:middle">
-                <span class="papertitle">Machine Learning-Based Disease Prediction System using Symptom Analysis</span>
-                <br>
-                <strong>Aastha Ketan Kataria</strong> and collaborators - <font color="red"><strong>Best Speaker Award</strong></font>
-                <br>
-                <em>Taylor & Francis, ICTEAH-2025</em>
-                <br>
-                <p></p>
-                <p>
-                  Developed a system to predict over 230 diseases from symptoms. Our Weighted KNN model achieved 93.5% accuracy, 
-                  showcasing the potential for scalable, contact-free preliminary health screening. 
-                  I was honored with the Best Speaker award out of 10 presenters for this paper.
-                </p>
-              </td>
-            </tr>
-
-            <tr>
-              <td style="padding:16px;width:20%;vertical-align:middle">
-                <img src='images/ppo-quadruped.jpg' width="160" style="border-radius: 8px;" alt="PPO Research">
-              </td>
-              <td style="padding:8px;width:80%;vertical-align:middle">
-                <span class="papertitle">Comparative Analysis of Standard vs. Curriculum-Based PPO in Quadrupedal Locomotion</span>
-                <br>
-                <strong>Aastha Ketan Kataria</strong> and collaborators
-                <br>
-                <em>Springer, ICICCT 2025</em>
-                <br>
-                <p></p>
-                <p>
-                  Our research challenged the conventional wisdom of curriculum learning in AI. We demonstrated that for complex quadrupedal locomotion, 
-                  standard reinforcement learning outperformed curriculum-based strategies due to a "negative transfer" effect, 
-                  highlighting the need for empirical validation in advanced AI.
-                </p>
-              </td>
-            </tr>
-
-          </tbody></table>
-
-          <!-- Professional Experience Section -->
+          
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>Professional Growth and Impact</h2>
+              <td style="padding:20px;width:100%;vertical-align:middle">
                 <p>
-                  My practical skills have been sharpened through a series of impactful internships and projects, 
-                  each building upon the foundation of discipline, leadership, and technical excellence established in my formative years.
-                </p>
-              </td>
-            </tr>
-          </tbody></table>
-
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <p>
-                  <strong>AI Engineer Intern</strong> - <a href="#credatha">CredArtha</a> (2025)<br>
-                  Currently contributing to the creation of FINA, a vertical financial LLM. My role involves LLM research and coding them from scratch, 
-                  fine-tuning, RAG experimentation, and developing Proofs-of-Concept. This work represents the cutting edge of financial AI applications.
+                  <strong>AI Engineer Intern</strong> - CredArtha (2025)<br>
+                  Developing FINA, a financial LLM. Working on model fine-tuning, RAG systems, and financial AI applications.
                 </p>
                 
                 <p>
-                  <strong>Project Lead</strong> - <a href="#godavari">Godavari Biorefineries Ltd.</a> (2024-2025)<br>
-                  Selected as the only girl among 30 students, I led a team of 15 on a project in Karnataka developing real-time AI-based detection systems 
-                  for industrial quality control using YOLOv8 models.
+                  <strong>Project Lead</strong> - Godavari Biorefineries Ltd. (2024-2025)<br>
+                  Leading 15-person team developing AI-based quality control systems for industrial manufacturing using computer vision.
                 </p>
                 
                 <p>
                   <strong>Summer Intern</strong> - PiPay (2024)<br>
-                  Designed and developed end-to-end WhatsApp automation workflows for the fintech client FinaLeap, 
-                  streamlining complex processes for Loan Against Property and Supply Chain Finance.
+                  Built WhatsApp automation workflows for fintech applications including loan processing and supply chain finance.
                 </p>
                 
                 <p>
                   <strong>Developer</strong> - Virtual Labs (2025)<br>
-                  Developed cryptography ciphers and created educational virtual lab environments for students, 
-                  bridging the gap between theoretical computer science and practical application.
-                </p>
-                
-                <p>
-                  <strong>Student Volunteer & Mentor</strong> - Agastya International Foundation<br>
-                  Selected as one of 10 mentors from my college, I guided a team of school students to develop "Helpy," 
-                  a mechanical picker for safely handling biohazardous waste, earning Grand Finalist recognition in a JPMC-sponsored social innovation challenge.
+                  Created educational cryptography tools and virtual lab environments for computer science education.
                 </p>
               </td>
             </tr>
           </tbody></table>
 
-          <!-- Early Innovation Section -->
+          <!-- Awards Section -->
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>From Tinkering to Innovation: The Engineering Spark</h2>
+              <td style="padding:20px;width:100%;vertical-align:middle">
+                <h2>Selected Awards</h2>
                 <p>
-                  My first formal step into product creation began in seventh grade with Eduprime, a robotics class that became my workshop for ideas. 
-                  I started by building an auto-movable shopping trolley and progressed to designing a portable, eco-friendly air conditioner. 
-                  This work led to my selection among the top 70 out of 300 applicants at the "Story of Makers" exhibition. 
-                  Later, my colleague and I secured third place at the INSEF science fair in Pune for our auto-movable, multipurpose farm equipment.
-                </p>
-                <p>
-                  In my second year, I took the entrepreneurial leap and attempted to launch "Math with Origami," 
-                  aiming to integrate mathematical concepts into daily-use items. While I was the only student in my batch to undertake such a venture, 
-                  the experience taught me the fundamentals of business: writing formal proposals, defining customer value, and pitching products. 
-                  This entrepreneurial pursuit was enriched by my experience at a summer school on computer vision and AI at IIIT Hyderabad, 
-                  where I learned from seasoned founders about the real-world dynamics of tech industry success.
+                  Smart India Hackathon 2024 Winner • Myntra WeForShe Hackathon Pre-Finalist • Best Speaker Award (ICTEAH 2025) • 
+                  Top 70/300 at "Story of Makers" Exhibition • Third Place at INSEF Science Fair
                 </p>
               </td>
             </tr>
           </tbody></table>
 
-          <!-- Skills Section -->
+          <!-- Background Section -->
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>Technical Arsenal</h2>
+              <td style="padding:20px;width:100%;vertical-align:middle">
+                <h2>Background</h2>
                 <p>
-                  <strong>Languages & Frameworks:</strong> Python (NumPy, Pandas, Matplotlib, OpenCV, Kivy), C/C++, JavaScript, 
-                  HTML/CSS, Django, React, SQL, Java, PHP, Flutter, RAG, LLM fine-tuning
+                  My interdisciplinary foundation spans athletics (table tennis, gymnastics, sailing), Sea Cadet Corps leadership training, 
+                  and early robotics work. This diverse background enables me to approach technical challenges from multiple perspectives 
+                  and communicate complex concepts to diverse audiences.
                 </p>
                 <p>
-                  <strong>AI & Robotics:</strong> YOLOv8, Computer Vision, Deep Learning, Reinforcement Learning (PPO), 
-                  ROS (Robot Operating System), LiDAR integration, Autonomous Systems
-                </p>
-                <p>
-                  <strong>Tools & Platforms:</strong> AutoCAD, SolidWorks, MATLAB (Simulink, Stateflow, Image Processing), 
-                  Arduino, Git, Docker, Google Gemini, TensorFlow, PyTorch
-                </p>
-              </td>
-            </tr>
-          </tbody></table>
-          <!-- Journey Section -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>My Journey of Action and Self-Discovery</h2>
-                <p>
-                  They say we are the sum of our actions, a philosophy that has defined my journey since I can remember. 
-                  From first to eighth grade, I immersed myself in table tennis, gymnastics, skating, chess, badminton, art, and speech. 
-                  This wasn't about collecting trophies, though I was fortunate to win several at the inter-club level. 
-                  It was a foundational education in developing a sense of self—learning to make connections between disparate fields, 
-                  a skill that has become my greatest asset in interdisciplinary environments like hackathons, tech expos, and summits.
-                </p>
-              </td>
-            </tr>
-          </tbody></table>
-
-          <!-- Leadership & Discipline Section -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>Forging Discipline and Leadership: The Sea Cadet Corps</h2>
-                <p>
-                  My journey took a more structured turn from fifth to ninth grade when I joined the Sea Cadet Corps (SCC) on Training Ship Jawahar. 
-                  Every weekend was an exercise in discipline—mastering rowing, sailing, rigging, and semaphore. The SCC instilled in me a profound sense of 
-                  punctuality, ethics, and personal conduct. I was honored to be chosen to lead and command marching divisions, 
-                  building the resilience and disciplined mindset that underpins all my subsequent endeavors. 
-                  Of the initial 400 cadets, only 150 remained after five years—a testament to the program's rigor and the strength it builds.
-                </p>
-              </td>
-            </tr>
-          </tbody></table>
-
-          <!-- Philosophy Section -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>The Sum of Actions</h2>
-                <p>
-                  From the diverse playgrounds of my childhood to the rigorous discipline of the Sea Cadets, 
-                  the creative crucible of robotics, the high-pressure environment of hackathons, and finally, 
-                  the intellectual frontier of academic research—every action has been a deliberate step. 
-                  Each experience has built upon the last, creating a resilient, interdisciplinary, and passion-driven leader, 
-                  builder, and researcher ready for the next challenge.
-                </p>
-                <p>
-                  This journey has taught me that mastery comes not from avoiding challenges, but from embracing them fully. 
-                  Whether leading teams through 24-hour hackathons, coding solutions from scratch, or presenting research to academic audiences, 
-                  I've learned that any concept—including complex mathematics and algorithms—can be mastered with sufficient effort and passion.
+                  From building auto-movable shopping trolleys in middle school to leading teams in national hackathons, 
+                  each experience has built resilience and problem-solving skills that inform my current research and development work.
                 </p>
               </td>
             </tr>
@@ -436,9 +430,9 @@
               <td style="padding:0px">
                 <br>
                 <p style="text-align:right;font-size:small;">
-                  Website design inspired by <a href="https://jonbarron.info/">Jon Barron</a>. 
+                  Website design inspired by <a href="https://jonbarron.info/">Jon Barron</a>
                   <br>
-                  Last updated: January 2025
+                  Last updated: August 2025
                 </p>
               </td>
             </tr>
