@@ -7,56 +7,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
     <style>
-      body {
-        font-family: 'Lato', Verdana, Helvetica, sans-serif;
-        font-size: 14px;
+      body { font-family: 'Lato', Verdana, Helvetica, sans-serif; font-size: 14px; margin: 0; padding: 0; background: #fafaf8; }
+      a { color: #1772d0; text-decoration: none; }
+      a:focus, a:hover { color: #f09228; text-decoration: none; }
+      .name { font-family: 'Lato', Verdana, Helvetica, sans-serif; font-size: 32px; font-weight: 400; }
+      .papertitle { font-family: 'Lato', Verdana, Helvetica, sans-serif; font-size: 14px; font-weight: 700; }
+      .one { width: 160px; height: 160px; position: relative; }
+      .two { width: 160px; height: 160px; position: absolute; transition: opacity .2s ease-in-out; }
+      table { border-spacing: 0px; }
+
+      /* Inline section heading with attractor beside h2 */
+      .sec-head {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 6px;
+      }
+      .sec-head h2 {
         margin: 0;
-        padding: 0;
-      }
-      
-      a {
-        color: #1772d0;
-        text-decoration: none;
-      }
-      
-      a:focus, a:hover {
-        color: #f09228;
-        text-decoration: none;
-      }
-      
-      .name {
-        font-family: 'Lato', Verdana, Helvetica, sans-serif;
-        font-size: 32px;
-        font-weight: 400;
-      }
-      
-      .papertitle {
-        font-family: 'Lato', Verdana, Helvetica, sans-serif;
-        font-size: 14px;
+        font-size: 20px;
         font-weight: 700;
+        line-height: 1;
       }
-      
-      .highlight {
-        background-color: #ffffd0;
+      .sec-head canvas {
+        display: block;
+        flex-shrink: 0;
+        border-radius: 4px;
       }
-      
-      .one {
-        width: 160px;
-        height: 160px;
-        position: relative;
-      }
-      
-      .two {
-        width: 160px;
-        height: 160px;
-        position: absolute;
-        transition: opacity .2s ease-in-out;
-        -moz-transition: opacity .2s ease-in-out;
-        -webkit-transition: opacity .2s ease-in-out;
-      }
-      
-      table {
-        border-spacing: 0px;
+      .sec-head .att-name {
+        font-size: 9px;
+        font-family: monospace;
+        color: #aaa;
+        white-space: nowrap;
+        align-self: flex-end;
+        margin-bottom: 2px;
       }
     </style>
   </head>
@@ -64,21 +48,15 @@
     <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
       <tr style="padding:0px">
         <td style="padding:0px">
-          <!-- Header Section -->
+
+          <!-- Header -->
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr style="padding:0px">
               <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <p class="name" style="text-align: center;">
-                  Aastha Ketan Kataria
-                </p>
-                <p>
-                  I'm a B.Tech Information Technology student at <a href="https://kjsce.somaiya.edu/">K J Somaiya College of Engineering</a>, Mumbai, with a focus on AI & ML. 
-                  I'm interested in robotics, computer vision, and practical AI applications that solve real-world problems.
-                </p>
-                <p>
-                  I work on projects that bridge theory and practice—from developing tactile robotics systems to creating AI models for medical diagnostics. 
-                  My recent work has centered on industrial AI applications and autonomous systems.
-                </p>
+                <p class="name" style="text-align:center;">Aastha Kataria</p>
+                <p>I'm fascinated by wildlife and find deep joy in discovering mathematical patterns in nature. There is so much to this world, from the unexplored vastness of the universe to the deepest crevices of the ocean, from the workings of the mind to the depths of the soul. We may not know much, but the curiosity to learn and ask questions is always there, where imagination meets discovery and leads to invention.</p>
+                <p>Math is not just numbers. Feelings are not just words. Human nature is a terse language with a lot left unsaid. I want to build everything I can, things that people can actually use. Enjoying the work, staying open to suggestions, and embracing the mutations that come from collaboration: that is what life is all about.</p>
+                <p>I'm a recent graduate from <a href="https://kjsce.somaiya.edu/">K.J. Somaiya College of Engineering</a>, Mumbai, with a B.Tech in Information Technology and Honours in AI, with a long trail of coding, building, and learning, including working with robots from scratch.</p>
                 <p style="text-align:center">
                   <a href="mailto:aasthakkataria@gmail.com">Email</a> &nbsp;/&nbsp;
                   <a href="data/Aastha-CV.pdf">CV</a> &nbsp;/&nbsp;
@@ -87,358 +65,308 @@
                 </p>
               </td>
               <td style="padding:2.5%;width:37%;max-width:37%">
-                <a href="images/profile.jpg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 20%;" alt="profile photo" src="images/profile.jpg"></a>
+                <a href="images/profile.jpg"><img style="width:100%;max-width:100%;object-fit:cover;border-radius:20%;" alt="profile photo" src="images/profile.jpg"></a>
               </td>
             </tr>
           </tbody></table>
 
-          <!-- Research Papers Section -->
+          <!-- Research Papers -->
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:20px;width:100%;vertical-align:middle">
+            <tr><td style="padding:20px;width:100%;vertical-align:middle">
+              <div class="sec-head">
+                <canvas class="att-canvas" data-att="Lorenz" data-color="#c0392b" width="70" height="54"></canvas>
                 <h2>Research Papers</h2>
-                <p>
-                  I focus on AI applications in healthcare and robotics, developing practical machine learning solutions for real-world problems.
-                </p>
+                <span class="att-name">Lorenz</span>
+              </div>
+              <p>I focus on AI applications in healthcare and robotics, developing practical machine learning solutions for real-world problems.</p>
+            </td></tr>
+          </tbody></table>
+
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr bgcolor="#ffffd0">
+              <td style="padding:20px;width:25%;vertical-align:middle"><img src='images/deeppet.png' width="160" style="border-radius:8px;" alt="DeepPET-3D"></td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <a href="https://www.taylorfrancis.com/chapters/edit/10.1201/9781003773771-50/deeppet-3d-deep-learning-based-3d-cnn-model-diagnosis-alzheimer-disease-using-18-fdg-pet-aastha-kataria-ninad-mehendale"><span class="papertitle">DeepPET-3D: A 3D Convolutional Neural Network for Early Detection of Alzheimer's Disease Using 18F-FDG PET Imaging</span></a>
+                <br><strong>Aastha Ketan Kataria</strong>, Ninad Mehendale &nbsp;·&nbsp; <font color="red"><strong>Best Speaker Award</strong></font>
+                <br><em>Taylor &amp; Francis, ICTEAH</em>, 2025<br><br>
+                <p>3D convolutional neural network for early Alzheimer's detection using PET imaging. Achieved 96.91% accuracy by analyzing complete 3D brain scans.</p>
+                <a href="https://www.taylorfrancis.com/chapters/edit/10.1201/9781003773771-50/deeppet-3d-deep-learning-based-3d-cnn-model-diagnosis-alzheimer-disease-using-18-fdg-pet-aastha-kataria-ninad-mehendale">chapter</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:20px;width:25%;vertical-align:middle"><img src='images/ml.png' width="160" style="border-radius:8px;" alt="Disease Prediction"></td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <a href="https://www.taylorfrancis.com/chapters/edit/10.1201/9781003773771-86/machine-learning-based-disease-prediction-system-using-symptom-analysis-aastha-kataria-ninad-mehendale"><span class="papertitle">Machine Learning-Based Disease Prediction System using Symptom Analysis</span></a>
+                <br><strong>Aastha Ketan Kataria</strong>, Ninad Mehendale
+                <br><em>Taylor &amp; Francis, ICTEAH</em>, 2025<br><br>
+                <p>Weighted KNN model predicting 230+ diseases from symptoms with 93.5% accuracy. Enables scalable preliminary health screening.</p>
+                <a href="https://www.taylorfrancis.com/chapters/edit/10.1201/9781003773771-86/machine-learning-based-disease-prediction-system-using-symptom-analysis-aastha-kataria-ninad-mehendale">chapter</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:20px;width:25%;vertical-align:middle"><img src='images/curri.png' width="160" style="border-radius:8px;" alt="PPO Research"></td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <a href="https://link.springer.com/book/9783032085993#affiliations"><span class="papertitle">Comparative Analysis of Standard vs. Curriculum-Based PPO in Quadrupedal Locomotion</span></a>
+                <br><strong>Aastha Ketan Kataria</strong>, et al.
+                <br><em>Springer, ICICCT</em>, 2025<br><br>
+                <p>Comparative study showing standard reinforcement learning outperformed curriculum-based approaches in complex quadrupedal locomotion due to negative transfer effects.</p>
+                <a href="https://link.springer.com/book/9783032085993#affiliations">chapter</a>
               </td>
             </tr>
           </tbody></table>
-          
+
+          <!-- Hackathons -->
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            
-            <!-- DeepPET-3D Research -->
-            <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <img src='images/deeppet.png' width="160" style="border-radius: 8px;" alt="DeepPET-3D">
-              </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
-                <span class="papertitle">DeepPET-3D: A 3D Convolutional Neural Network for Early Detection of Alzheimer's Disease Using 18F-FDG PET Imaging</span>
-                <br>
-                <strong>Aastha Ketan Kataria</strong>, et al.-<font color="red"><strong>Best Speaker Award</strong></font>
-                <br>
-                <em>Taylor & Francis, ICTEAH</em>, 2025
-                <br>
-                <p></p>
-                <p>
-                  3D convolutional neural network for early Alzheimer's detection using PET imaging. 
-                  Achieved 96.91% accuracy by analyzing complete 3D brain scans.
-                </p>
-              </td>
-            </tr>
-
-            <!-- Disease Prediction System -->
-            <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <img src='images/ml.png' width="160" style="border-radius: 8px;" alt="Disease Prediction">
-              </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
-                <span class="papertitle">Machine Learning-Based Disease Prediction System using Symptom Analysis</span>
-                <br>
-                <strong>Aastha Ketan Kataria</strong>, et al.  
-                <br>
-                <em>Taylor & Francis, ICTEAH</em>, 2025
-                <br>
-                <p></p>
-                <p>
-                  Weighted KNN model predicting 230+ diseases from symptoms with 93.5% accuracy. 
-                  Enables scalable preliminary health screening.
-                </p>
-              </td>
-            </tr>
-
-            <!-- PPO Research -->
-            <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <img src='images/curri.png' width="160" style="border-radius: 8px;" alt="PPO Research">
-              </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
-                <span class="papertitle">Comparative Analysis of Standard vs. Curriculum-Based PPO in Quadrupedal Locomotion</span>
-                <br>
-                <strong>Aastha Ketan Kataria</strong>, et al.
-                <br>
-                <em>Springer, ICICCT</em>, 2025
-                <br>
-                <p></p>
-                <p>
-                  Comparative study showing standard reinforcement learning outperformed curriculum-based approaches 
-                  in complex quadrupedal locomotion due to negative transfer effects.
-                </p>
-              </td>
-            </tr>
-
-          </tbody></table>
-
-          <!-- Hackathons Section -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:20px;width:100%;vertical-align:middle">
+            <tr><td style="padding:20px;width:100%;vertical-align:middle">
+              <div class="sec-head">
+                <canvas class="att-canvas" data-att="Finance" data-color="#8e44ad" width="70" height="54"></canvas>
                 <h2>Hackathons</h2>
-                <p>
-                  Competition-driven development projects showcasing rapid prototyping and team leadership skills.
-                </p>
-              </td>
-            </tr>
+                <span class="att-name">Finance</span>
+              </div>
+              <p>Competition-driven development projects showcasing rapid prototyping and team leadership skills.</p>
+            </td></tr>
           </tbody></table>
-          
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
-            <!-- Smart India Hackathon Winner - Highlighted -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr onmouseout="sih_stop()" onmouseover="sih_start()" bgcolor="#ffffd0">
               <td style="padding:20px;width:25%;vertical-align:middle">
                 <div class="one">
-                  <div class="two" id='sih_image'>
-                    <img src='images/simpleswastha.png' width="160" style="border-radius: 8px;">
-                  </div>
-                  <img src='images/simpleswastha.png' width="160" style="border-radius: 8px;">
+                  <div class="two" id='sih_image'><img src='images/simpleswastha.png' width="160" style="border-radius:8px;"></div>
+                  <img src='images/simpleswastha.png' width="160" style="border-radius:8px;">
                 </div>
-                <script type="text/javascript">
-                  function sih_start() {
-                    document.getElementById('sih_image').style.opacity = "1";
-                  }
-                  function sih_stop() {
-                    document.getElementById('sih_image').style.opacity = "0";
-                  }
-                  sih_stop()
-                </script>
+                <script>function sih_start(){document.getElementById('sih_image').style.opacity="1";}function sih_stop(){document.getElementById('sih_image').style.opacity="0";}sih_stop()</script>
               </td>
               <td style="padding:20px;width:75%;vertical-align:middle">
                 <span class="papertitle">SimpleSwastha: Hospital Management System</span>
-                <br>
-                <strong>Aastha Ketan Kataria</strong> (Team Lead)
-                <br>
-                <em>Smart India Hackathon</em>, 2024 - <font color="red"><strong>WINNER</strong></font>
-                <br>
-                <p></p>
-                <p>
-                  Led team to victory in national hackathon, selected from 500+ applicants to final 5 teams. 
-                  Developed comprehensive hospital management application for patient care and medical record management.
-                </p>
+                <br><strong>Aastha Ketan Kataria</strong> (Team Lead)
+                <br><em>Smart India Hackathon</em>, 2024 — <font color="red"><strong>WINNER</strong></font><br><br>
+                <p>Led team to victory in national hackathon, selected from 500+ applicants to final 5 teams. Developed comprehensive hospital management application for patient care and medical record management.</p>
               </td>
             </tr>
-
-            <!-- MoneyMind Project -->
             <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <img src='images/moneymind.jpg' width="160" style="border-radius: 8px;" alt="MoneyMind App">
-              </td>
+              <td style="padding:20px;width:25%;vertical-align:middle"><img src='images/moneymind.jpg' width="160" style="border-radius:8px;" alt="MoneyMind"></td>
               <td style="padding:20px;width:75%;vertical-align:middle">
                 <span class="papertitle">MoneyMind: Multi-Agent Financial Assistant</span>
-                <br>
-                <strong>Aastha Ketan Kataria</strong> (Team Lead)
-                <br>
-                <em>Google Solution Challenge</em>, 2024
-                <br>
-                <p></p>
-                <p>
-                  Multi-agent GenAI financial assistant powered by Google Gemini for new investor guidance. 
-                  Built complete system from concept to deployment despite hardware constraints.
-                </p>
+                <br><strong>Aastha Ketan Kataria</strong> (Team Lead)
+                <br><em>Google Solution Challenge</em>, 2024<br><br>
+                <p>Multi-agent GenAI financial assistant powered by Google Gemini for new investor guidance. Built complete system from concept to deployment despite hardware constraints.</p>
               </td>
             </tr>
-
-            <!-- Myntra Hackathon -->
             <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <img src='images/myntraweforshe.jpeg' width="160" style="border-radius: 8px;" alt="Myntra WeForShe">
-              </td>
+              <td style="padding:20px;width:25%;vertical-align:middle"><img src='images/myntraweforshe.jpeg' width="160" style="border-radius:8px;" alt="Myntra WeForShe"></td>
               <td style="padding:20px;width:75%;vertical-align:middle">
                 <span class="papertitle">Myntra WeForShe Hackathon</span>
-                <br>
-                <strong>Aastha Ketan Kataria</strong> (Team Lead)
-                <br>
-                <em>Myntra WeForShe Hackathon</em>, 2024 - <font color="red"><strong>PRE-FINALIST</strong></font>
-                <br>
-                <p></p>
-                <p>
-                  Advanced from 1000+ participants through multiple rounds to reach the Grand Finale. 
-                  Demonstrated product development and pitching skills in competitive fintech environment.
-                </p>
+                <br><strong>Aastha Ketan Kataria</strong> (Team Lead)
+                <br><em>Myntra WeForShe Hackathon</em>, 2024 — <font color="red"><strong>PRE-FINALIST</strong></font><br><br>
+                <p>Advanced from 1000+ participants through multiple rounds to reach the Grand Finale. Demonstrated product development and pitching skills in competitive fintech environment.</p>
               </td>
             </tr>
-
           </tbody></table>
 
-          <!-- Robotics Team Section -->
+          <!-- Robotics -->
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:20px;width:100%;vertical-align:middle">
+            <tr><td style="padding:20px;width:100%;vertical-align:middle">
+              <div class="sec-head">
+                <canvas class="att-canvas" data-att="Halvorsen" data-color="#1a7a4a" width="70" height="54"></canvas>
                 <h2>Robotics Team</h2>
-                <p>
-                  Leading marine robotics development for environmental applications using ROS and autonomous systems.
-                </p>
-              </td>
-            </tr>
+                <span class="att-name">Halvorsen</span>
+              </div>
+              <p>Leading marine robotics development for environmental applications using ROS and autonomous systems.</p>
+            </td></tr>
           </tbody></table>
-          
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
-            <!-- TMRT Project - Highlighted -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr onmouseout="tmrt_stop()" onmouseover="tmrt_start()" bgcolor="#ffffd0">
               <td style="padding:20px;width:25%;vertical-align:middle">
                 <div class="one">
-                  <div class="two" id='tmrt_image'>
-                    <img src='images/tmrt.png' width="160" style="border-radius: 8px;">
-                  </div>
-                  <img src='images/tmrt.png' width="160" style="border-radius: 8px;">
+                  <div class="two" id='tmrt_image'><img src='images/tmrt.png' width="160" style="border-radius:8px;"></div>
+                  <img src='images/tmrt.png' width="160" style="border-radius:8px;">
                 </div>
-                <script type="text/javascript">
-                  function tmrt_start() {
-                    document.getElementById('tmrt_image').style.opacity = "1";
-                  }
-                  function tmrt_stop() {
-                    document.getElementById('tmrt_image').style.opacity = "0";
-                  }
-                  tmrt_stop()
-                </script>
+                <script>function tmrt_start(){document.getElementById('tmrt_image').style.opacity="1";}function tmrt_stop(){document.getElementById('tmrt_image').style.opacity="0";}tmrt_stop()</script>
               </td>
               <td style="padding:20px;width:75%;vertical-align:middle">
                 <span class="papertitle">The Marine Robotics Team: Aquatic Environmental Systems</span>
-                <br>
-                <strong>Aastha Ketan Kataria</strong> (Team Captain)
-                <br>
-                <em>Ongoing Project</em>, 2023-2025
-                <br>
-                <p></p>
-                <p>
-                  Leading development of 'Nisrag,' a sewage cleaning robot, an aquatic desilting robot, and a drone-based groundwater mapping system using ROS. 
-                  These systems address environmental challenges through autonomous robotics and sensor integration.
-                </p>
+                <br><strong>Aastha Ketan Kataria</strong> (Team Captain)
+                <br><em>Ongoing Project</em>, 2023–2025<br><br>
+                <p>Leading development of 'Nisrag,' a sewage cleaning robot, an aquatic desilting robot, and a drone-based groundwater mapping system using ROS. These systems address environmental challenges through autonomous robotics and sensor integration.</p>
               </td>
             </tr>
-
           </tbody></table>
 
-          <!-- Industrial Projects Section -->
+          <!-- Industrial Projects -->
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:20px;width:100%;vertical-align:middle">
+            <tr><td style="padding:20px;width:100%;vertical-align:middle">
+              <div class="sec-head">
+                <canvas class="att-canvas" data-att="Aizawa" data-color="#d35400" width="70" height="54"></canvas>
                 <h2>Industrial Projects</h2>
-                <p>
-                  Applied AI research in industrial settings, focusing on computer vision and quality control automation.
-                </p>
-              </td>
-            </tr>
+                <span class="att-name">Aizawa</span>
+              </div>
+              <p>Applied AI research in industrial settings, focusing on computer vision and quality control automation.</p>
+            </td></tr>
           </tbody></table>
-          
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
-            <!-- Industrial AI Project - Highlighted -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr onmouseout="godavari_stop()" onmouseover="godavari_start()" bgcolor="#ffffd0">
               <td style="padding:20px;width:25%;vertical-align:middle">
                 <div class="one">
-                  <div class="two" id='godavari_image'>
-                    <img src='images/gbl.jpg' width="100" style="border-radius: 8px;">
-                  </div>
-                  <img src='images/gbl.jpg' width="100" style="border-radius: 8px;">
+                  <div class="two" id='godavari_image'><img src='images/gbl.jpg' width="100" style="border-radius:8px;"></div>
+                  <img src='images/gbl.jpg' width="100" style="border-radius:8px;">
                 </div>
-                <script type="text/javascript">
-                  function godavari_start() {
-                    document.getElementById('godavari_image').style.opacity = "1";
-                  }
-                  function godavari_stop() {
-                    document.getElementById('godavari_image').style.opacity = "0";
-                  }
-                  godavari_stop()
-                </script>
+                <script>function godavari_start(){document.getElementById('godavari_image').style.opacity="1";}function godavari_stop(){document.getElementById('godavari_image').style.opacity="0";}godavari_stop()</script>
               </td>
               <td style="padding:20px;width:75%;vertical-align:middle">
                 <span class="papertitle">Real-time Contaminant Detection in Industrial Sugar Production</span>
-                <br>
-                <strong>Aastha Ketan Kataria</strong> (Project Lead)
-                <br>
-                <em>Godavari Biorefineries Ltd.</em>, 2024-2025
-                <br>
-                <p></p>
-                <p>
-                  Leading team of 15 to develop YOLOv8-based real-time contaminant detection system for industrial sugar production lines. 
-                  Project focuses on automating quality control in manufacturing environments.
-                </p>
+                <br><strong>Aastha Ketan Kataria</strong> (Project Lead)
+                <br><em>Godavari Biorefineries Ltd.</em>, 2024–2025<br><br>
+                <p>Leading team of 15 to develop YOLOv8-based real-time contaminant detection system for industrial sugar production lines. Project focuses on automating quality control in manufacturing environments.</p>
               </td>
             </tr>
-
           </tbody></table>
 
-          <!-- Experience Section -->
+          <!-- Experience -->
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:20px;width:100%;vertical-align:middle">
+            <tr><td style="padding:20px;width:100%;vertical-align:middle">
+              <div class="sec-head">
+                <canvas class="att-canvas" data-att="Thomas" data-color="#1a5fa8" width="70" height="54"></canvas>
                 <h2>Experience</h2>
-              </td>
-            </tr>
-          </tbody></table>
-          
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:20px;width:100%;vertical-align:middle">
-                <p>
-                  <strong>AI Engineer Intern</strong> - CredArtha (2025)<br>
-                  Developing FINA, a financial LLM. Working on model fine-tuning, RAG systems, and financial AI applications.
-                </p>
-                
-                <p>
-                  <strong>Project Lead</strong> - Godavari Biorefineries Ltd. (2024-2025)<br>
-                  Leading 15-person team developing AI-based quality control systems for industrial manufacturing using computer vision.
-                </p>
-                
-                <p>
-                  <strong>Summer Intern</strong> - PiPay (2024)<br>
-                  Built WhatsApp automation workflows for fintech applications including loan processing and supply chain finance.
-                </p>
-                
-                <p>
-                  <strong>Developer</strong> - Virtual Labs (2025)<br>
-                  Created educational cryptography tools and virtual lab environments for computer science education.
-                </p>
-              </td>
-            </tr>
+                <span class="att-name">Thomas</span>
+              </div>
+            </td></tr>
           </tbody></table>
 
-          <!-- Awards Section -->
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:20px;width:100%;vertical-align:middle">
+            <tr><td style="padding:20px;width:100%;vertical-align:middle">
+              <span class="papertitle">Research Intern</span>
+              <br><a href="https://kjsce.somaiya.edu/">K.J. Somaiya College of Engineering</a>, Mumbai
+              <br><em>Guide: <a href="https://en.wikipedia.org/wiki/Sudhir_Ranjan_Jain">Dr. Sudhir Ranjan Jain</a></em><br><br>
+              <p>Working on three research threads under quantum mathematics and physics:</p>
+              <ul style="margin:0 0 12px 0;padding-left:16px;">
+                <li>Quantum speedup algorithm for random number generation.</li>
+                <li>Mathematical analysis of nodal domains in equilateral triangles and their boundary behavior.</li>
+                <li>Quantum surface codes generalizing configurations for <em>D</em> nodes and <em>m</em> ancillary bits within topological structures.</li>
+              </ul>
+              <p><strong>AI Engineer Intern</strong> — CredArtha (2025)<br>Developing FINA, a financial LLM. Working on model fine-tuning, RAG systems, and financial AI applications.</p>
+              <p><strong>Project Lead</strong> — Godavari Biorefineries Ltd. (2024–2025)<br>Leading 15-person team developing AI-based quality control systems for industrial manufacturing using computer vision.</p>
+              <p><strong>Summer Intern</strong> — PiPay (2024)<br>Built WhatsApp automation workflows for fintech applications including loan processing and supply chain finance.</p>
+              <p><strong>Developer</strong> — Virtual Labs (2025)<br>Created educational cryptography tools and virtual lab environments for computer science education.</p>
+            </td></tr>
+          </tbody></table>
+
+          <!-- Awards -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr><td style="padding:20px;width:100%;vertical-align:middle">
+              <div class="sec-head">
+                <canvas class="att-canvas" data-att="Rossler" data-color="#c0392b" width="70" height="54"></canvas>
                 <h2>Selected Awards</h2>
-                <p>
-                  Smart India Hackathon 2024 Winner • Myntra WeForShe Hackathon Pre-Finalist • Best Speaker Award (ICTEAH 2025) • 
-                  Top 70/300 at "Story of Makers" Exhibition • Third Place at INSEF Science Fair
-                </p>
-              </td>
-            </tr>
+                <span class="att-name">Rössler</span>
+              </div>
+              <p>Smart India Hackathon 2024 Winner &nbsp;·&nbsp; Myntra WeForShe Hackathon Pre-Finalist &nbsp;·&nbsp; Best Speaker Award (ICTEAH 2025) &nbsp;·&nbsp; Top 70/300 at "Story of Makers" Exhibition &nbsp;·&nbsp; Third Place at INSEF Science Fair</p>
+            </td></tr>
           </tbody></table>
 
-          <!-- Background Section -->
+          <!-- Background -->
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:20px;width:100%;vertical-align:middle">
+            <tr><td style="padding:20px;width:100%;vertical-align:middle">
+              <div class="sec-head">
+                <canvas class="att-canvas" data-att="SprottB" data-color="#5a3e8a" width="70" height="54"></canvas>
                 <h2>Background</h2>
-                <p>
-                  My interdisciplinary foundation spans athletics (table tennis, gymnastics, sailing), Sea Cadet Corps leadership training, 
-                  and early robotics work. This diverse background enables me to approach technical challenges from multiple perspectives 
-                  and communicate complex concepts to diverse audiences.
-                </p>
-                <p>
-                  From building auto-movable shopping trolleys in middle school to leading teams in national hackathons, 
-                  each experience has built resilience and problem-solving skills that inform my current research and development work.
-                </p>
-              </td>
-            </tr>
+                <span class="att-name">Sprott B</span>
+              </div>
+              <p>My interdisciplinary foundation spans athletics (table tennis, gymnastics, sailing), <a href="https://www.linkedin.com/company/seacadetcorps-india/about/">Sea Cadet Corps</a>, and early robotics work. From building auto-movable shopping trolleys in middle school to leading teams in national hackathons — each experience has built resilience and problem-solving skills that inform my current research and development work.</p>
+            </td></tr>
           </tbody></table>
 
           <!-- Footer -->
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:0px">
-                <br>
-                <p style="text-align:right;font-size:small;">
-                  Website design inspired by <a href="https://jonbarron.info/">Jon Barron</a>
-                  <br>
-                  Last updated: August 2025
-                </p>
-              </td>
-            </tr>
+            <tr><td style="padding:0px"><br>
+              <p style="text-align:right;font-size:small;">
+                Website design inspired by <a href="https://jonbarron.info/">Jon Barron</a><br>
+                Last updated: June 2026
+              </p>
+            </td></tr>
           </tbody></table>
+
         </td>
       </tr>
     </tbody></table>
+
+  <script>
+  (function(){
+    const DEFS = {
+      Lorenz:    { fn:([x,y,z])=>[10*(y-x), x*(28-z)-y, x*y-(8/3)*z],                                                                                              dt:0.005, init:[1,1,1] },
+      Halvorsen: { fn:([x,y,z])=>{ const a=1.4; return [-a*x-4*y-4*z-y*y,-a*y-4*z-4*x-z*z,-a*z-4*x-4*y-x*x]; },                                                   dt:0.005, init:[-1.48,1.51,2.04] },
+      Finance:   { fn:([x,y,z])=>[(1/0.2-0.1)*x+z+x*y,-0.1*y-x*x,-x-0.2*z],                                                                                       dt:0.01,  init:[2,0,1] },
+      Aizawa:    { fn:([x,y,z])=>{ const a=0.95,b=0.7,c=0.6,d=3.5,e=0.25,f=0.1; return [(z-b)*x-d*y, d*x+(z-b)*y, c+a*z-z*z*z/3-(x*x+y*y)*(1+e*z)+f*z*x*x*x]; }, dt:0.01, init:[0.1,0,0] },
+      Thomas:    { fn:([x,y,z])=>[Math.sin(y)-0.19*x, Math.sin(z)-0.19*y, Math.sin(x)-0.19*z],                                                                     dt:0.05,  init:[0.1,0,0] },
+      Rossler:   { fn:([x,y,z])=>[-y-z, x+0.2*y, 0.2+z*(x-5.7)],                                                                                                   dt:0.02,  init:[1,1,0] },
+      SprottB:   { fn:([x,y,z])=>[y*z, x-y, 1-x*y],                                                                                                                 dt:0.02,  init:[0.63,0.47,-0.54] },
+    };
+
+    function rk4(fn,s,dt){
+      const k1=fn(s),k2=fn(s.map((v,i)=>v+dt/2*k1[i])),k3=fn(s.map((v,i)=>v+dt/2*k2[i])),k4=fn(s.map((v,i)=>v+dt*k3[i]));
+      return s.map((v,i)=>v+dt/6*(k1[i]+2*k2[i]+2*k3[i]+k4[i]));
+    }
+
+    function hexRgb(h){ return [parseInt(h.slice(1,3),16),parseInt(h.slice(3,5),16),parseInt(h.slice(5,7),16)]; }
+
+    function initAtt(cv){
+      const def = DEFS[cv.dataset.att];
+      if(!def) return;
+      const [r,g,b] = hexRgb(cv.dataset.color||'#c0392b');
+      const W=cv.width, H=cv.height;
+      const ctx=cv.getContext('2d');
+
+      // pre-integrate
+      let s=[...def.init];
+      for(let i=0;i<2000;i++) s=rk4(def.fn,s,def.dt);
+      const pts=[];
+      for(let i=0;i<40000;i++){
+        s=rk4(def.fn,s,def.dt);
+        if(!isFinite(s[0])||!isFinite(s[1])||!isFinite(s[2])) break;
+        pts.push([...s]);
+      }
+      if(pts.length<100) return;
+
+      let angle=0;
+      const tilt=0.3;
+
+      function draw(){
+        ctx.clearRect(0,0,W,H);
+
+        // project with current angle
+        const cos=Math.cos(angle), sin=Math.sin(angle);
+        const ctilt=Math.cos(tilt), stilt=Math.sin(tilt);
+        const proj=pts.map(([x,y,z])=>{
+          const rx=x*cos+z*sin;
+          const rz=-x*sin+z*cos;
+          const ry=y*ctilt-rz*stilt;
+          return [rx,ry];
+        });
+
+        let mnx=Infinity,mxx=-Infinity,mny=Infinity,mxy=-Infinity;
+        for(const [px,py] of proj){if(px<mnx)mnx=px;if(px>mxx)mxx=px;if(py<mny)mny=py;if(py>mxy)mxy=py;}
+        const pad=3;
+        const sc=Math.min((W-pad*2)/(mxx-mnx||1),(H-pad*2)/(mxy-mny||1));
+        const ox=(W-(mxx-mnx)*sc)/2-mnx*sc, oy=(H-(mxy-mny)*sc)/2-mny*sc;
+
+        ctx.strokeStyle=`rgb(${r},${g},${b})`;
+        ctx.lineWidth=0.45;
+        ctx.globalAlpha=0.75;
+        ctx.beginPath();
+        ctx.moveTo(proj[0][0]*sc+ox, proj[0][1]*sc+oy);
+        for(let i=1;i<proj.length;i++) ctx.lineTo(proj[i][0]*sc+ox, proj[i][1]*sc+oy);
+        ctx.stroke();
+        ctx.globalAlpha=1;
+
+        angle+=0.004;
+        requestAnimationFrame(draw);
+      }
+      draw();
+    }
+
+    document.querySelectorAll('canvas.att-canvas').forEach(cv=>initAtt(cv));
+  })();
+  </script>
+
   </body>
 </html>
