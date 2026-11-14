@@ -6,41 +6,76 @@
     <meta name="author" content="Aastha Ketan Kataria">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
     <style>
-      body { font-family: 'Lato', Verdana, Helvetica, sans-serif; font-size: 14px; margin: 0; padding: 0; background: #fafaf8; }
-      a { color: #1772d0; text-decoration: none; }
-      a:focus, a:hover { color: #f09228; text-decoration: none; }
-      .name { font-family: 'Lato', Verdana, Helvetica, sans-serif; font-size: 32px; font-weight: 400; }
-      .papertitle { font-family: 'Lato', Verdana, Helvetica, sans-serif; font-size: 14px; font-weight: 700; }
+      :root {
+        --bg: #faf8f3; --ink: #2a2723; --muted: #7a746a; --line: #e7e1d4;
+        --link: #1a5fa8; --link-hover: #d9730d;
+        --hl: #fff6d6; --hl-edge: #e9b949; --card: #ffffff;
+        --badge-bg: #fdecea; --badge-ink: #b42318;
+      }
+      html { scroll-behavior: smooth; }
+      body {
+        font-family: 'Lato', Verdana, Helvetica, sans-serif; font-size: 15px; line-height: 1.6;
+        color: var(--ink); margin: 0; padding: 24px 12px 40px;
+        background: var(--bg);
+        background-image: radial-gradient(circle at 1px 1px, rgba(120,100,60,.07) 1px, transparent 0);
+        background-size: 22px 22px;
+      }
+      p { margin: 0 0 12px; }
+      a { color: var(--link); text-decoration: none; transition: color .15s; }
+      a:focus, a:hover { color: var(--link-hover); }
+      table { border-spacing: 0px; }
+      li { margin-bottom: 4px; }
+
+      .name { font-family: 'Fraunces', Georgia, serif; font-size: 44px; font-weight: 600; letter-spacing: -.5px; line-height: 1.1; margin: 0 0 6px; }
+      .tagline { text-align: center; color: var(--muted); font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 18px; }
+      .links { text-align: center; margin-top: 18px; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+      .links a {
+        border: 1px solid var(--line); background: var(--card); color: var(--ink);
+        padding: 5px 14px; border-radius: 999px; font-size: 13px; font-weight: 700;
+        transition: all .15s;
+      }
+      .links a:hover { border-color: var(--link-hover); color: var(--link-hover); transform: translateY(-1px); box-shadow: 0 3px 8px rgba(0,0,0,.06); }
+      .profile { width: 100%; max-width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 24%; box-shadow: 0 10px 30px rgba(60,45,20,.18); border: 4px solid #fff; box-sizing: border-box; }
+
+      .papertitle { font-size: 15px; font-weight: 700; line-height: 1.35; }
       .one { width: 160px; height: 160px; position: relative; }
       .two { width: 160px; height: 160px; position: absolute; transition: opacity .2s ease-in-out; }
-      table { border-spacing: 0px; }
+      td img[width] { box-shadow: 0 2px 10px rgba(60,45,20,.12); background: #fff; }
 
-      /* Inline section heading with attractor beside h2 */
-      .sec-head {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        margin-bottom: 6px;
-      }
-      .sec-head h2 {
-        margin: 0;
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 1;
-      }
-      .sec-head canvas {
-        display: block;
-        flex-shrink: 0;
-        border-radius: 4px;
-      }
-      .sec-head .att-name {
-        font-size: 9px;
-        font-family: monospace;
-        color: #aaa;
-        white-space: nowrap;
-        align-self: flex-end;
-        margin-bottom: 2px;
+      /* Section headings */
+      .sec-head { display: flex; align-items: center; gap: 12px; margin: 14px 0 12px; padding-bottom: 8px; border-bottom: 1px solid var(--line); }
+      .sec-head h2 { margin: 0; font-family: 'Fraunces', Georgia, serif; font-size: 24px; font-weight: 600; line-height: 1; }
+      .sec-head canvas { display: block; flex-shrink: 0; border-radius: 4px; }
+      .sec-head .att-name { font-size: 9px; font-family: monospace; color: #b0a999; white-space: nowrap; margin-left: auto; align-self: flex-end; }
+      h3 { font-family: 'Fraunces', Georgia, serif; }
+
+      /* Highlighted rows become soft cards */
+      tr[bgcolor] > td { background: var(--hl); }
+      tr[bgcolor] > td:first-child { border-left: 4px solid var(--hl-edge); border-radius: 12px 0 0 12px; }
+      tr[bgcolor] > td:last-child { border-radius: 0 12px 12px 0; }
+      tr[bgcolor] > td:only-child { border-radius: 12px; }
+
+      /* Award badges */
+      font[color="red"] { background: var(--badge-bg); color: var(--badge-ink); padding: 2px 9px; border-radius: 999px; font-size: 11px; letter-spacing: .4px; white-space: nowrap; }
+      .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+      .chips li { background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 5px 14px; margin: 0; font-size: 13.5px; }
+      .chips li::before { content: "\2605"; color: var(--hl-edge); margin-right: 7px; }
+
+      .footer { text-align: center; font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; margin-top: 10px; }
+
+      @media (max-width: 640px) {
+        body { padding: 12px 4px 30px; }
+        table, tbody, tr, td { display: block; width: 100% !important; max-width: 100% !important; box-sizing: border-box; }
+        .name { font-size: 36px; }
+        .profile-cell { text-align: center; }
+        .profile { max-width: 200px; }
+        tr[bgcolor] { background: var(--hl); border-left: 4px solid var(--hl-edge); border-radius: 12px; margin-bottom: 8px; }
+        tr[bgcolor] > td, tr[bgcolor] > td:first-child, tr[bgcolor] > td:last-child { border: 0; border-radius: 0; background: transparent; }
+        td[style*="width:25%"] { padding-bottom: 0 !important; }
       }
     </style>
   </head>
@@ -54,19 +89,20 @@
             <tr style="padding:0px">
               <td style="padding:2.5%;width:63%;vertical-align:middle">
                 <p class="name" style="text-align:center;">Aastha Kataria</p>
+                <p class="tagline">AI &nbsp;·&nbsp; Robotics &nbsp;·&nbsp; Quantum &nbsp;·&nbsp; Builder</p>
                 <p>I'm fascinated by wildlife and find deep joy in discovering mathematical patterns in nature. There is so much to this world, from the unexplored vastness of the universe to the deepest crevices of the ocean, from the workings of the mind to the depths of the soul. We may not know much, but the curiosity to learn and ask questions is always there, where imagination meets discovery and leads to invention.</p>
                 <p>Math is not just numbers. Feelings are not just words. Human nature is a terse language with a lot left unsaid. I want to build everything I can, things that people can actually use. Enjoying the work, staying open to suggestions, and embracing the mutations that come from collaboration: that is what life is all about.</p>
                 <p>I'm a recent graduate from <a href="https://kjsce.somaiya.edu/">K.J. Somaiya College of Engineering</a>, Mumbai, with a B.Tech in Information Technology and Honours in AI, with a long trail of coding, building, and learning, including working with robots from scratch.</p>
-                <p style="text-align:center">
-                  <a href="mailto:aasthakkataria@gmail.com">Email</a> &nbsp;/&nbsp;
-                  <a href="data/Aastha-CV.pdf">CV</a> &nbsp;/&nbsp;
-                  <a href="https://github.com/faith250">GitHub</a> &nbsp;/&nbsp;
-                  <a href="https://www.linkedin.com/in/aastha-kataria-b5847426b/">LinkedIn</a> &nbsp;/&nbsp;
+                <p class="links">
+                  <a href="mailto:aasthakkataria@gmail.com">Email</a>
+                  <a href="data/Aastha-CV.pdf">CV</a>
+                  <a href="https://github.com/faith250">GitHub</a>
+                  <a href="https://www.linkedin.com/in/aastha-kataria-b5847426b/">LinkedIn</a>
                   <a href="https://x.com/Faithwintnsky">X</a>
                 </p>
               </td>
-              <td style="padding:2.5%;width:37%;max-width:37%">
-                <a href="images/profile.jpg"><img style="width:100%;max-width:100%;object-fit:cover;border-radius:20%;" alt="profile photo" src="images/profile.jpg"></a>
+              <td class="profile-cell" style="padding:2.5%;width:37%;max-width:37%">
+                <a href="images/profile.jpg"><img class="profile" alt="profile photo" src="images/profile.jpg"></a>
               </td>
             </tr>
           </tbody></table>
@@ -373,7 +409,15 @@
                 <h2>Selected Awards</h2>
                 <span class="att-name">Rössler</span>
               </div>
-              <p>ETHGlobal Mumbai 2026, 2nd Place, Arkiv Prize (HunterVerse) &nbsp;·&nbsp; Smart India Hackathon 2024 Winner &nbsp;·&nbsp; Myntra WeForShe Hackathon Pre-Finalist &nbsp;·&nbsp; Best Speaker Award (ICTEAH 2025) &nbsp;·&nbsp; Top 70/300 at "Story of Makers" Exhibition &nbsp;·&nbsp; Third Place at INSEF Regional Science Fair, Pune &nbsp;·&nbsp; Grand Finalist, The Schools Challenge (Agastya &amp; J.P. Morgan)</p>
+              <ul class="chips">
+                <li>ETHGlobal Mumbai 2026, 2nd Place, Arkiv Prize (HunterVerse)</li>
+                <li>Smart India Hackathon 2024 Winner</li>
+                <li>Myntra WeForShe Hackathon Pre-Finalist</li>
+                <li>Best Speaker Award (ICTEAH 2025)</li>
+                <li>Top 70/300 at "Story of Makers" Exhibition</li>
+                <li>Third Place at INSEF Regional Science Fair, Pune</li>
+                <li>Grand Finalist, The Schools Challenge (Agastya &amp; J.P. Morgan)</li>
+              </ul>
             </td></tr>
           </tbody></table>
 
@@ -393,8 +437,8 @@
           <!-- Footer -->
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr><td style="padding:0px"><br>
-              <p style="text-align:right;font-size:small;">
-                Website design inspired by <a href="https://jonbarron.info/">Jon Barron</a><br>
+              <p class="footer">
+                Website design inspired by <a href="https://jonbarron.info/">Jon Barron</a> &nbsp;·&nbsp;
                 Last updated: November 2026
               </p>
             </td></tr>
